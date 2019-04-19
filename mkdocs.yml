@@ -7,17 +7,78 @@ repo_url: https://github.com/alochym01/camera-docs
 edit_uri: ""
 
 theme:
-    name: readthedocs 
+    name: readthedocs
     highlightjs: true
     hljs_languages:
         - yaml
         - django
-
 nav:
     - Home: index.md
+    - Ansible:
+        - Install: ansible/install.md
+        - Setup: ansible/setup.md
+        - Config: ansible/config.md
+        - Trouble shoot: ansible/troubleshoot.md
     - FTP:
-        - Setup: ftp/setup.md
-        - Config: ftp/config.md
+        - Install: vsftp/install.md
+        - Setup: vsftp/setup.md
+        - Config: vsftp/config.md
+        - Trouble shoot: vsftp/troubleshoot.md
+    - Django:
+        - Install: django/install.md
+        - Setup: django/setup.md
+        - Config: django/config.md
+        - Trouble shoot: django/troubleshoot.md
+    - Flask:
+        - Install: flask/install.md
+        - Setup: flask/setup.md
+        - Config: flask/config.md
+        - Trouble shoot: flask/troubleshoot.md
+    - Elasticsearch:
+        - Install: elasticsearch/install.md
+        - Setup: elasticsearch/setup.md
+        - Config: elasticsearch/config.md
+        - Trouble shoot: elasticsearch/troubleshoot.md
+    - Logstash:
+        - Install: logstash/install.md
+        - Setup: logstash/setup.md
+        - Config: logstash/config.md
+        - Trouble shoot: logstash/troubleshoot.md
+    - Filebeat:
+        - Install: filebeat/install.md
+        - Setup: filebeat/setup.md
+        - Config: filebeat/config.md
+        - Trouble shoot: filebeat/troubleshoot.md
+    - Nginx:
+        - Install: nginx/install.md
+        - Setup: nginx/setup.md
+        - Config: nginx/config.md
+        - Trouble shoot: nginx/troubleshoot.md
+    - Openresty:
+        - Install: openresty/install.md
+        - Setup: openresty/setup.md
+        - Config: openresty/config.md
+        - Trouble shoot: openresty/troubleshoot.md
+    - DM-writeboost:
+        - Install: dm-writeboost/install.md
+        - Setup: dm-writeboost/setup.md
+        - Config: dm-writeboost/config.md
+        - Trouble shoot: dm-writeboost/troubleshoot.md
+    - Lizardfs:
+        - Install: lizardfs/install.md
+        - Setup: lizardfs/setup.md
+        - Config: lizardfs/config.md
+        - Trouble shoot: lizardfs/troubleshoot.md
+    - Mysql:
+        - Install: mysql/install.md
+        - Setup: mysql/setup.md
+        - Config: mysql/config.md
+        - Trouble shoot: mysql/troubleshoot.md
+    - Prometheus:
+        - Install: prometheus/install.md
+        - Setup: prometheus/setup.md
+        - Config: prometheus/config.md
+        - Trouble shoot: prometheus/troubleshoot.md
     - User Guide:
         - Writing Your Docs: user-guide/writing-your-docs.md
         - Styling Your Docs: user-guide/styling-your-docs.md
@@ -35,7 +96,7 @@ extra_css:
 
 markdown_extensions:
     - toc:
-        permalink: 
+        permalink:
     - admonition
     - def_list
 
