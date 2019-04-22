@@ -3,6 +3,7 @@
     *   Cấu hình
         *   vsftpd
             *   Tạo home directory `/data/ftp` cho các FTP users
+
             ```bash
             mkdir /data/ftp									#create root directory for all ftp user
             mkdir /etc/vsftpd/vconf							#create vsftpd virtual users directory config
@@ -12,6 +13,7 @@
             ```
 
         *   Configuration for vsftpd's pam `/etc/pam.d/vsftpd`
+
             ```bash
             # Auth in Web API
             auth       required  pam_url.so config=/etc/pam_url.conf
@@ -25,6 +27,7 @@
             ```
 
         *   vsftpd config file `/etc/vsftpd/vsftpd.conf`
+
             ```bash
             # Allow anonymous FTP? (Beware - allowed by default if you comment this out).
             anonymous_enable=NO
@@ -82,6 +85,7 @@
             ```
 
         *   Configuration pam\_url `/etc/pam_url.conf`
+
             ```bash
             pam_url:
             {
@@ -107,6 +111,7 @@
             ```
 
         *   Configuration pam\_script `/etc/pam-script.d/pam_script_auth`
+
             ```bash
             #!/bin/sh
 
@@ -135,6 +140,7 @@
         *   `sudo chown -R hadn: /var/log/flask`
     *   Dùng sqlite làm database
         *   database schema
+
             ```bash
             CREATE TABLE  accounts (
                 id int(11) AUTO_INCREMENT PRIMARY KEY,
@@ -144,7 +150,9 @@
                 timestamp DATETIME NOT NULL
             );
             ```
+
     *   Cấu trúc folders của API
+
         ```bash
         ├── api
         │   ├── __init__.py
@@ -169,7 +177,9 @@
         └── systemd
             └── env
         ```
+
     *   Flask routes
+
         ```bash
 
             Endpoint        Methods  Rule
@@ -180,6 +190,7 @@
             account.index   GET      /account/
             static          GET      /static/<path:filename>
         ```
+
     *   URL của API
         *   URL tạo account **/account/create**
             *   Methods **POST**
@@ -197,7 +208,8 @@
                 *   username
                 *   password
     *   Tạo systemc file `/etc/systemd/system/flask.service`
-        ```text
+
+        ```bash
             [Unit]
             Description = VsFTP for FLASK
             After = network.target
@@ -226,7 +238,9 @@
             [Install]
             WantedBy=multi-user.target
         ```
+
     *   Nginx configuration file
+
         ```bash
             server {
                 listen       80;
