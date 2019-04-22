@@ -17,11 +17,9 @@
             ```bash
             # Auth in Web API
             auth       required  pam_url.so config=/etc/pam_url.conf
-
             # Running script if user have no root's directory
             # the script file name shoule be pam_script_auth
             auth       required pam_script.so onerr=success dir=/etc
-
             # Account in Web API
             account    required   pam_url.so config=/etc/pam_url.conf
             ```
@@ -31,42 +29,31 @@
             ```bash
             # Allow anonymous FTP? (Beware - allowed by default if you comment this out).
             anonymous_enable=NO
-
             # Uncomment this to allow local users to log in.
             # When SELinux is enforcing check for SE bool ftp_home_dir
             local_enable=YES
-
             # Uncomment this to enable any form of FTP write command.
             write_enable=YES
-
             # Default umask for local users is 077. You may wish to change this to 022,
             # if your users expect that (022 is used by most other ftpd's)
             local_umask=022
-
             # Activate directory messages - messages given to remote users when they
             # go into a certain directory.
             dirmessage_enable=YES
-
             # Activate logging of uploads/downloads.
             xferlog_enable=YES
-
             # Make sure PORT transfer connections originate from port 20 (ftp-data).
             connect_from_port_20=YES
-
             # verbose ftp log, should disable xferlog_std_format=NO
             log_ftp_protocol=YES
-
             # You may change the default value for timing out an idle session.
             idle_session_timeout=600
-
             # You may change the default value for timing out a data connection.
             data_connection_timeout=120
-
             # When "listen" directive is enabled, vsftpd runs in standalone mode and
             # listens on IPv4 sockets. This directive cannot be used in conjunction
             # with the listen_ipv6 directive.
             listen=YES
-
             listen_ipv6=NO
             vsftpd_log_file=/var/log/vsftpd.log
             nopriv_user=vsftpd
@@ -98,7 +85,6 @@
                     extradata   = "&do=login";                 # extra data to send
                     prompt      = "Token: ";                   # password prompt
                 };
-
                 ssl:
                 {
                     verify_peer = true;                               # Verify peer?
@@ -114,7 +100,6 @@
 
             ```bash
             #!/bin/sh
-
             if [ ! -d "/data/ftp/$PAM_USER" ]; then
             /usr/bin/env mkdir /data/ftp/$PAM_USER
             /usr/bin/env chown vsftpd:vsftpd /data/ftp/$PAM_USER
@@ -213,18 +198,15 @@
             [Unit]
             Description = VsFTP for FLASK
             After = network.target
-
             [Service]
             Type=simple
             # using systemd environment file
             # should be edit the file for mapping to real system
             EnvironmentFile=-/home/hadn/ftp-api/systemd/env
             LimitNOFILE=16384
-
             PermissionsStartOnly = true
             User = hadn
             Group = hadn
-
             # should be create python virtual environment
             # start gunicorn at flask source code
             # check cpu cores - cat /proc/cpuinfo | grep 'core id' | wc -l
@@ -234,7 +216,6 @@
             ExecStop = /bin/kill -s TERM $MAINPID
             ExecStopPost = /bin/rm -rf $PIDFile
             PrivateTmp = true
-
             [Install]
             WantedBy=multi-user.target
         ```
@@ -245,12 +226,7 @@
             server {
                 listen       80;
                 server_name  prod-ftp.iotc.vn;
-
                 #charset koi8-r;
-                #access_log  /var/log/nginx/host.access.log  main;
-
-                # proxy the PHP scripts to Apache listening on 127.0.0.1:80
-                #
                 location / {
                     proxy_pass http://127.0.0.1:5000/;
                     proxy_http_version 1.1;
