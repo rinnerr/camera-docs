@@ -4,16 +4,17 @@
         *   vsftpd
             *   Tạo home directory `/data/ftp` cho các FTP users
 
-        .. code-block:: bash
+            ``` bash
             mkdir /data/ftp									#create root directory for all ftp user
             mkdir /etc/vsftpd/vconf							#create vsftpd virtual users directory config
             useradd -s /sbin/nologin -d /data/ftp vsftpd	#create a local virtual user
             chown -R vsftpd:vsftpd /etc/vsftpd/vconf
             chown -R vsftpd:vsftpd /data/ftp				#change owner root directory for all ftp user
-
-        *   Configuration for vsftpd's pam `/etc/pam.d/vsftpd`
-
             ```
+
+        *   Configuration for vsftpd's pam /etc/pam.d/vsftpd
+
+            ``` bash
             # Auth in Web API
             auth       required  pam_url.so config=/etc/pam_url.conf
             # Running script if user have no root's directory
