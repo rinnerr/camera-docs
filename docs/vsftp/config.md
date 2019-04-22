@@ -4,7 +4,7 @@
         *   vsftpd
             *   Tạo home directory `/data/ftp` cho các FTP users
 
-            ```bash
+            ```
             mkdir /data/ftp									#create root directory for all ftp user
             mkdir /etc/vsftpd/vconf							#create vsftpd virtual users directory config
             useradd -s /sbin/nologin -d /data/ftp vsftpd	#create a local virtual user
@@ -14,7 +14,7 @@
 
         *   Configuration for vsftpd's pam `/etc/pam.d/vsftpd`
 
-            ```bash
+            ```
             # Auth in Web API
             auth       required  pam_url.so config=/etc/pam_url.conf
             # Running script if user have no root's directory
@@ -26,7 +26,7 @@
 
         *   vsftpd config file `/etc/vsftpd/vsftpd.conf`
 
-            ```bash
+            ```
             # Allow anonymous FTP? (Beware - allowed by default if you comment this out).
             anonymous_enable=NO
             # Uncomment this to allow local users to log in.
@@ -73,7 +73,7 @@
 
         *   Configuration pam\_url `/etc/pam_url.conf`
 
-            ```bash
+            ```
             pam_url:
             {
                 settings:
@@ -166,14 +166,13 @@
     *   Flask routes
 
         ```bash
-
-            Endpoint        Methods  Rule
-            --------------  -------  -----------------------
-            account.check   POST     /account/check
-            account.create  POST     /account/create
-            account.delete  POST     /account/delete
-            account.index   GET      /account/
-            static          GET      /static/<path:filename>
+        Endpoint        Methods  Rule
+        --------------  -------  -----------------------
+        account.check   POST     /account/check
+        account.create  POST     /account/create
+        account.delete  POST     /account/delete
+        account.index   GET      /account/
+        static          GET      /static/<path:filename>
         ```
 
     *   URL của API
@@ -195,35 +194,35 @@
     *   Tạo systemc file `/etc/systemd/system/flask.service`
 
         ```bash
-            [Unit]
-            Description = VsFTP for FLASK
-            After = network.target
-            [Service]
-            Type=simple
-            # using systemd environment file
-            # should be edit the file for mapping to real system
-            EnvironmentFile=-/home/hadn/ftp-api/systemd/env
-            LimitNOFILE=16384
-            PermissionsStartOnly = true
-            User = hadn
-            Group = hadn
-            # should be create python virtual environment
-            # start gunicorn at flask source code
-            # check cpu cores - cat /proc/cpuinfo | grep 'core id' | wc -l
-            # flask service start with user hadn and hadn's home folder - /home/hadn
-            ExecStart = /home/hadn/ftp-api/venv/bin/gunicorn  -c ${gunicorn_config_file} run:app -b 127.0.0.1:5000 -w 4 --pid ${PIDFile}
-            ExecReload = /bin/kill -s HUP $MAINPID
-            ExecStop = /bin/kill -s TERM $MAINPID
-            ExecStopPost = /bin/rm -rf $PIDFile
-            PrivateTmp = true
-            [Install]
-            WantedBy=multi-user.target
+        [Unit]
+        Description = VsFTP for FLASK
+        After = network.target
+        [Service]
+        Type=simple
+        # using systemd environment file
+        # should be edit the file for mapping to real system
+        EnvironmentFile=-/home/hadn/ftp-api/systemd/env
+        LimitNOFILE=16384
+        PermissionsStartOnly = true
+        User = hadn
+        Group = hadn
+        # should be create python virtual environment
+        # start gunicorn at flask source code
+        # check cpu cores - cat /proc/cpuinfo | grep 'core id' | wc -l
+        # flask service start with user hadn and hadn's home folder - /home/hadn
+        ExecStart = /home/hadn/ftp-api/venv/bin/gunicorn  -c ${gunicorn_config_file} run:app -b 127.0.0.1:5000 -w 4 --pid ${PIDFile}
+        ExecReload = /bin/kill -s HUP $MAINPID
+        ExecStop = /bin/kill -s TERM $MAINPID
+        ExecStopPost = /bin/rm -rf $PIDFile
+        PrivateTmp = true
+        [Install]
+        WantedBy=multi-user.target
         ```
 
     *   Nginx configuration file
 
         ```bash
-            server {
+        server {
                 listen       80;
                 server_name  prod-ftp.iotc.vn;
                 #charset koi8-r;
@@ -233,5 +232,5 @@
                     proxy_set_header Upgrade $http_upgrade;
                     proxy_set_header Connection "upgrade";
                 }
-            }
+        }
         ```
