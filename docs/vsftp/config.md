@@ -4,13 +4,12 @@
         *   vsftpd
             *   Tạo home directory `/data/ftp` cho các FTP users
 
-        ```bash
+        .. code-block:: bash
             mkdir /data/ftp									#create root directory for all ftp user
             mkdir /etc/vsftpd/vconf							#create vsftpd virtual users directory config
             useradd -s /sbin/nologin -d /data/ftp vsftpd	#create a local virtual user
             chown -R vsftpd:vsftpd /etc/vsftpd/vconf
             chown -R vsftpd:vsftpd /data/ftp				#change owner root directory for all ftp user
-        ```
 
         *   Configuration for vsftpd's pam `/etc/pam.d/vsftpd`
 
