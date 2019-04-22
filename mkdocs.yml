@@ -74,6 +74,16 @@ nav:
         - Setup: mysql/setup.md
         - Config: mysql/config.md
         - Trouble shoot: mysql/troubleshoot.md
+    - Redis:
+        - Install: redis/install.md
+        - Setup: redis/setup.md
+        - Config: redis/config.md
+        - Trouble shoot: redis/troubleshoot.md
+    - Memcached:
+        - Install: memcached/install.md
+        - Setup: memcached/setup.md
+        - Config: memcached/config.md
+        - Trouble shoot: memcached/troubleshoot.md
     - Prometheus:
         - Install: prometheus/install.md
         - Setup: prometheus/setup.md
