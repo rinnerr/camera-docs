@@ -23,11 +23,11 @@ Mon Mar 25 11:34:08 2019 [pid 55389] [chivt2] OK UPLOAD: Client "118.69.167.41",
 ``` python
 (?<logdate>[%{YEAR}]+-[%{MONTHNUM}]+-[%{MONTHDAY}]+\s*[%{HOUR}]+:(?:[0-5][0-9]):(?:(?:[0-5]?[0-9]|60)(?:[:.,][0-9]+)?))\t.*?\t.*?\t.*?\t.*?\t.*?\tMyStreamRecorderListener.onSegmentEnd\[(?<duration>[+-]?(?:[0-9]+))]\[%{DATA:image}]\[%{DATA:location}]\[%{DATA:savepath}]\[%{DATA:recordlocation}]\[(?<recordtimestampwowza>[+-]?(?:[0-9]+))]\[%{DATA:debuginfo}]\[%{DATA:wowza_application}]\t
 
-    FTP Motion Image:
+ * FTP Motion Image:
 
 (?<ftplogdate>%{DAY}+%{SPACE}%{MONTH} %{MONTHDAY} %{TIME} %{YEAR}) %{DATA:vsftpd_pid} \[%{DATA:camera_serial}\] %{WORD:vsftpd_action_status} %{WORD:vsftpd_action}: Client \"%{IP:vsftpd_client_ip}\"(, \"(?<vsftp_path>.*\/(?<daterecord>%{YEAR}-%{MONTHNUM}-%{MONTHDAY})\/.*\/.*\/(?<timerecord>(?:[+-]?(?:[0-9]))(?:[+-]?(?:[0-9]))(?:[+-]?(?:[0-9]))(?:[+-]?(?:[0-9]))(?:[+-]?(?:[0-9]))(?:[+-]?(?:[0-9]))).*.jpg)\",%{DATA:vsftpd_file_size}, %{DATA:vsftpd_file_transfer_speed})$
 
-    FTP Motion Video:
+ * FTP Motion Video:
 
 (?<ftplogdate>(?:Mon(?:day)?|Tue(?:sday)?|Wed(?:nesday)?|Thu(?:rsday)?|Fri(?:day)?|Sat(?:urday)?|Sun(?:day)?)+ (?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?) (?:(?:0[1-9])|(?:[12][0-9])|(?:3[01])|[1-9]) (?!<[0-9])(?:2[0123]|[01]?[0-9]):(?:[0-5][0-9])(?::(?:(?:[0-5]?[0-9]|60)(?:[:.,][0-9]+)?))(?![0-9]) (?>\d\d){1,2}) %{DATA:vsftpd_pid} \[%{DATA:camera_serial}\] %{WORD:vsftpd_action_status} %{WORD:vsftpd_action}: Client \"(?<vsftpd_client_ip>(?<![0-9])(?:(?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})[.](?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})[.](?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2})[.](?:25[0-5]|2[0-4][0-9]|[0-1]?[0-9]{1,2}))(?![0-9]))\"(, \"(?<vsftp_path>.*\/(?<daterecordv>(?>\d\d){1,2}-(?:0?[1-9]|1[0-2])-(?:(?:0[1-9])|(?:[12][0-9])|(?:3[01])|[1-9]))\/.*\/.*\/(?<timerecordv>(?:[+-]?(?:[0-9]+)).(?:[+-]?(?:[0-9]+)).(?:[+-]?(?:[0-9]+))).*.h264)\",%{DATA:vsftpd_file_size}, %{DATA:vsftpd_file_transfer_speed})$
 
