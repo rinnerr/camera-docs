@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      lang="en"
+      xml:lang="en"
+      ng-csp="no-unsafe-eval"
+      class="">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta name="viewport" content="width=device-width">
+  <title>Sign in  |  OpenProject</title>
+
+  <meta name="app_base_path" content=""/>
+  <base href="/" />
+
+  <meta name="openproject_initializer"
+        data-locale="en"
+        data-first-day-of-week=""
+        data-default-locale="en"
+        data-environment="production"/>
+  <meta name="current_menu_item" content="account"/>
+  <meta name="demo_projects_available" content="true"/>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="gUYUzjgu1y1RyGc5c9hgvZU3IQ4ZAaaYPTH3T+tntNY/3/tXs1bRy/7q/mOZ2lOmUYaZDBLWxfNeGiDcSXulBA==" />
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-939cbdbd3b0f071269abd28ddfcb2f922d6257ce6ef70ba4941ea1708a564ab3.ico" />
+
+  <link rel="apple-touch-icon" type="image/png" href="/assets/apple-touch-icon-120x120-7cc127b22515cb03208e0cd2ab29c30545d6c1d232a8d68058c751bf29626354.png" sizes="120x120" />
+
+  <link rel="stylesheet" media="all" href="/assets/openproject-9f70455eb10d5384192cc4354952bc09d45eeb6e72b1d49c01b74b2d302473e4.css" />
+
+  <script src="/assets/frontend/vendor.05bf9d47b0383a6c907e.js"></script><script src="/assets/frontend/polyfills.1f4c30744949c176e045.js"></script><script src="/assets/frontend/runtime.56cacfcca8c7b056600a.js"></script><script src="/assets/frontend/main.9c8c8be896a5f98c56cb.js"></script><link rel="stylesheet" media="screen" href="/assets/frontend/styles.22aa6b3e09686aaa20dd.css" />
+
+  <script src="/assets/application-9129f999389f9055f267ed00d3c2f820cfc1ae936754fe5fcf75934d870918da.js"></script>
+  <script src="/assets/locales/en-f9619a49732d4d814dc36d2a32fe02fca0b3ae962e78d88df477f77c79c61686.js"></script>
+  <!-- Text formatting specific includes -->
+  <script src="/assets/vendor/ckeditor/ckeditor-aee78320449caeb483976db349b0649fed54ce932a15f9724b1c58f06326c7b5.js"></script>
+  <!-- Onboarding specific includes -->
+  <script src="/assets/vendor/enjoyhint-3016066952fff5a297e52b21d0f96a7e4d8c51c9dd47945f7b351375bfbd7fdc.js"></script>
+  <!-- project specific tags -->
+  
+  <!-- page specific tags -->
+  
+  
+</head>
+<body class="theme-core_design controller-account action-login ee-banners-visible" data-relative_url_root="/">
+<noscript>
+  <div class="top-shelf icon icon-warning">
+    <h1>JavaScript disabled</h1>
+    <p>
+      You need to activate JavaScript in order to use OpenProject!
+    </p>
+    <h2>
+      <a href="http://www.enable-javascript.com/" target="_blank">Learn more</a>
+    </h2>
+  </div>
+</noscript>
+<div id="wrapper" style="display:none" class="can-hide-navigation nosidebar">
+    <div id="top-menu">
+      <div id="header">
+        <div id="top-menu-items">
+          <h1 class="hidden-for-sighted">
+            Top Menu
+          </h1>
+          <main-menu-toggle></main-menu-toggle>
+          <a href="" class="hidden-for-sighted skip-navigation-link"
+             aria-label="Click here to skip over the menu and go to the content">
+            Jump to content
+          </a>
+          <ul id="account-nav-left" class="menu_root account-nav"></ul>
+          <div id="logo" class="hidden-for-mobile">
+            <a class="home-link" href="http://42.117.7.84:1234/">Home</a>
+          </div>
+          
+          <div class="top-menu-items-right">
+            <div class="top-menu-search--wrapper hidden-for-mobile">
+  <label class="hidden-for-sighted" for="q">Search</label>
+
+  <form action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+    
+
+    <expandable-search>
+
+    </expandable-search>
+</form></div>
+
+            <ul id="account-nav-right" class="menu_root account-nav"><li class=" drop-down"><a icon="icon-menu" title="Modules" aria-haspopup="true" class=" " href=""><i class="icon-menu"  aria-hidden="true"></i><span class="button--dropdown-text"></span></a><ul style="display:none" id="more-menu" class="menu-drop-down-container drop-down--modules "><li><a class="work-packages-menu-item ellipsis" title="Work packages" href="/work_packages"><span class="menu-item--title ellipsis">Work packages</span></a></li><li><a class="news-menu-item ellipsis" title="News" href="/news"><span class="menu-item--title ellipsis">News</span></a></li></ul></li><li class="hidden-for-mobile drop-down"><a title="Help" class="menu-item--help" aria-haspopup="true" href=""><i class="icon-help"  aria-hidden="true"></i></a><ul style="display:none" class="menu-drop-down-container drop-down--help"><li><span class="drop-down--help-headline" title="Getting started">Getting started</span></li><section data-augmented-model-wrapper
+         data-modal-iframe-url="https://player.vimeo.com/video/163426858?autoplay=1"
+         data-modal-class-name="onboarding-modal -highlight">
+  <li>
+    <a title="Introduction video" class="modal-wrapper--activation-link" href="">Introduction video</a>
+  </li>
+  
+<div class="modal-wrapper--content">
+  <div class="onboarding--start-modal">
+    <div class="onboarding--top-menu op-modal--modal-header">
+      <i class="icon-context icon-user"  aria-hidden="true"></i>
+      <h2>Welcome to OpenProject</h2>
+      <a class="op-modal--modal-close-button dynamic-content-modal--close-button"
+         title="Close popup"
+         aria-label="Close popup">
+        <i class="icon-close"  aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <div class="onboarding--main op-modal--modal-body">
+      <h2>Get an overview</h2>
+      <div class="onboarding--video-block">
+        <div class="onboarding--video-text">
+          <span>Get a quick overview of project management and team collaboration with OpenProject.</span>
+        </div>
+        <div class="onboarding--video iframe-target-wrapper">
+        </div>
+      </div>
+    </div>
+
+    <div class="onboarding--footer op-modal--modal-footer">
+      <em><label>You can restart this video from the help menu</label></em>
+      <button class="dynamic-content-modal--close-button button -highlight -large"
+              title=Close> Close
+      </button>
+    </div>
+  </div>
+</div>
+
+</section>
+<hr class="form--separator"></hr><li><span class="drop-down--help-headline" title="Help and support">Help and support</span></li><li><a title="Upgrade to Enterprise Edition" target="_blank" href="https://www.openproject.org/enterprise-edition/?utm_source=unknown&amp;utm_medium=op-instance&amp;utm_campaign=ee-upsale-help-menu">Upgrade to Enterprise Edition</a></li><li><a title="User guides" target="_blank" href="https://www.openproject.org/help/">User guides</a></li><li><a title="Videos" target="_blank" href="https://www.youtube.com/c/OpenProjectCommunity">Videos</a></li><li><a class="help-link-shortcuts-link" title="Shortcuts" href="">Shortcuts</a></li><li><a title="Community forum" target="_blank" href="https://community.openproject.com/projects/openproject/boards">Community forum</a></li><li><a title="Professional support" target="_blank" href="https://www.openproject.org/project-collaboration-products/#support">Professional support</a></li><hr class="form--separator"></hr><li><span class="drop-down--help-headline" title="Additional resources">Additional resources</span></li><li><a title="OpenProject website" target="_blank" href="https://www.openproject.org/?utm_source=unknown&amp;utm_medium=op-instance&amp;utm_campaign=website-help-menu">OpenProject website</a></li><li><a title="Security alerts / Newsletter" target="_blank" href="https://www.openproject.org/newsletter/?utm_source=unknown&amp;utm_medium=op-instance&amp;utm_campaign=newsletter-help-menu">Security alerts / Newsletter</a></li><li><a title="OpenProject blog" target="_blank" href="https://www.openproject.org/blog">OpenProject blog</a></li><li><a title="Release notes" target="_blank" href="https://www.openproject.org/release-notes/">Release notes</a></li><li><a title="Report a bug" target="_blank" href="https://www.openproject.org/development/report-a-bug/">Report a bug</a></li><li><a title="Development roadmap" target="_blank" href="https://community.openproject.org/projects/openproject/roadmap">Development roadmap</a></li><li><a title="Add and edit translations" target="_blank" href="https://crowdin.com/projects/opf">Add and edit translations</a></li><li><a title="API documentation" target="_blank" href="https://www.openproject.org/api">API documentation</a></li></ul></li><li class="drop-down last-child drop-down"><a class="login" title="Sign in" href="/login">Sign in<i class="button--dropdown-indicator"></i></a><ul style="display:none" class="menu-drop-down-container ">
+<div id="nav-login-content">
+  <form autocomplete="off" class="-vertical form" action="/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="v3QnilDdriEQkPUadRjjkdbgQouvP/D2fxQp0nrzfy4B7cgT26Wox7+ybECfGtCKElH6iaTok50cP/5B2O9u/A==" />
+    <input type="hidden" name="back_url" id="back_url" value="http://42.117.7.84:1234/attachments/116" />
+
+    <div class="grid-block">
+      <div class="form--field -required">
+        <label class="form--label" title="Login" for="username-pulldown">Login</label>
+        <div class="form--field-container">
+          <span class="form--text-field-container"><input type="text" name="username" id="username-pulldown" tabindex="1" autocapitalize="none" class="form--text-field" /></span>
+        </div>
+        <div class="form--field-extra-actions">
+              <a title="Create a new account" href="/account/register">Create a new account</a>
+        </div>
+      </div>
+
+      <div class="form--field -required">
+        <label class="form--label" title="Password" for="password-pulldown">Password</label>
+        <div class="form--field-container">
+          <span class="form--text-field-container"><input type="password" name="password" id="password-pulldown" tabindex="1" class="form--text-field -password" /></span>
+        </div>
+        <div class="form--field-extra-actions">
+            <a href="/account/lost_password">Forgot your password?</a>
+        </div>
+      </div>
+
+      <div class="form--field">
+        <label class="form--label">
+          &nbsp;
+        </label>
+        <input type="submit" name="login" id="login-pulldown"
+          value="Sign in" class="button -highlight" tabindex="1" />
+      </div>
+    </div>
+
+    
+
+</form></div>
+</ul></li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div id="main"
+       class="can-hide-navigation nosidebar">
+    <div id="content-wrapper" class="can-hide-navigation nosidebar">
+        <div id="breadcrumb" class="can-hide-navigation nosidebar">
+          <span style = 'display: block' class = 'position-label hidden-for-sighted'>You are here:</span>
+          <ul class="breadcrumb"><li class="first-breadcrumb-element" style="list-style-image:none;">Sign in</li></ul>
+          
+        </div>
+      
+      <notifications-container></notifications-container>
+      <div id="content" class="can-hide-navigation nosidebar">
+        <h1 class="hidden-for-sighted">Content</h1>
+        
+          <!-- Action menu -->
+          
+
+          
+
+
+<div id="login-form" class="form -bordered">
+  <h1>Sign in</h1>
+
+  <hr class="form--separator" />
+    
+<form autocomplete="off" class="-wide-labels form" action="/login" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="9h1g7oB6tpHbIlJEwD2B/JkeSmFoin7gge1CUR2Hex1IhI93CwKwd3QAyx4qP7LnXa/yY2NdHYvixpXCv5tqzw==" />
+  <input type="hidden" name="back_url" value="http%3A%2F%2F42.117.7.84%3A1234%2Fattachments%2F116" />
+
+  <div class="form--field">
+    <label class="form--label" title="Login" for="username">Login</label>
+    <div class="form--field-container">
+      <span class="form--text-field-container"><input type="text" name="username" id="username" autofocus="autofocus" autocapitalize="none" class="form--text-field" /></span>
+    </div>
+  </div>
+
+  <div class="form--field">
+    <label class="form--label" title="Password" for="password">Password</label>
+    <div class="form--field-container">
+      <span class="form--text-field-container"><input type="password" name="password" id="password" class="form--text-field -password" /></span>
+    </div>
+  </div>
+
+
+  <input type="submit" name="login" value="Sign in" class="button -highlight" />
+
+  <div class="login-options-container">
+    <div class="login-links">
+        <a href="/account/lost_password">Forgot your password?</a>
+        <br>
+        <a title="Create a new account" class="registration-modal--activation-link modal-wrapper--activation-link" href="">Create a new account</a>
+    </div>
+  </div>
+</form>
+<section data-augmented-model-wrapper
+         data-activation-selector=".registration-modal--activation-link"
+         data-modal-class-name="registration-modal modal-wrapper">
+  
+<div class="modal-wrapper--content">
+  <form class="form -wide-labels" id="new_user" action="/account/register" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="FoUPbsX+6Ml+ku0tnBuuvkgECSO7aenJAVo4mGjGFFioHOD3TobuL9GwdHd2GZ2ljLWxIbC+iqJice8LytoFig==" />
+
+    <input type="hidden" name="back_url" value="http%3A%2F%2F42.117.7.84%3A1234%2Fattachments%2F116" />
+    
+
+    <div class="op-modal--modal-header">
+      <h2>
+        <i class="icon-context icon-user"  aria-hidden="true"></i>
+        Welcome to OpenProject
+      </h2>
+      <a class="op-modal--modal-close-button dynamic-content-modal--close-button"
+         title="Close popup"
+         aria-label="Close popup">
+        <i class="icon-close"  aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <div class="op-modal--modal-body">
+      <h2>Create a new account</h2>
+      <section class="form--section">
+          <div class="form--field -wide-label">
+              <label class="form--label -required" title="Login" for="user_login">Login<span class="form--label-required" aria-hidden="true">*</span></label><span class="form--field-container"><span class="form--text-field-container"><input size="25" required="required" class="form--text-field" aria-required="true" type="text" value="" name="user[login]" id="user_login" /></span></span>
+          </div>
+        <div class="form--field -wide-label">
+          <label class="form--label -required" title="First name" for="user_firstname">First name<span class="form--label-required" aria-hidden="true">*</span></label><span class="form--field-container"><span class="form--text-field-container"><input required="required" class="form--text-field" aria-required="true" type="text" value="" name="user[firstname]" id="user_firstname" /></span></span>
+        </div>
+
+        <div class="form--field -wide-label">
+          <label class="form--label -required" title="Last name" for="user_lastname">Last name<span class="form--label-required" aria-hidden="true">*</span></label><span class="form--field-container"><span class="form--text-field-container"><input required="required" class="form--text-field" aria-required="true" type="text" value="" name="user[lastname]" id="user_lastname" /></span></span>
+        </div>
+
+          <div class="form--field -wide-label">
+            <label class="form--label -required" title="Email" for="user_mail">Email<span class="form--label-required" aria-hidden="true">*</span></label><span class="form--field-container"><span class="form--text-field-container"><input required="required" class="form--text-field" aria-required="true" type="text" value="" name="user[mail]" id="user_mail" /></span></span>
+          </div>
+
+        
+
+        
+
+        <br/><br/>
+          <div class="form--field -wide-label -reduced-margin">
+            <label class="form--label -required" title="Password" for="user_password">Password<span class="form--label-required" aria-hidden="true">*</span></label><span class="form--field-container"><span class="form--text-field-container"><input required="required" size="25" autocomplete="off" class="form--text-field -password" aria-required="true" type="password" name="user[password]" id="user_password" /></span></span>
+            <div class="form--field-instructions">
+              <em>Must be at least 10 characters long.</em>
+            </div>
+          </div>
+          <div class="form--field -wide-label">
+            <label class="form--label -required" title="Confirmation" for="user_password_confirmation">Confirmation<span class="form--label-required" aria-hidden="true">*</span></label><span class="form--field-container"><span class="form--text-field-container"><input required="required" size="25" autocomplete="off" class="form--text-field -password" aria-required="true" type="password" name="user[password_confirmation]" id="user_password_confirmation" /></span></span>
+          </div>
+      </section>
+
+
+      <button name="button" type="submit" class="-highlight -with-icon icon-checkmark button">Create</button>
+
+      
+
+    </div>
+    <div class="op-modal--modal-footer">
+      
+    </div>
+</form></div>
+
+</section>
+
+  
+
+</div>
+
+
+        
+      </div>
+    </div>
+  </div>
+  <div id="ajax-indicator" style="display:none;"><span>Loading...</span></div>
+</div>
+<script nonce="7IRJ7exBZ3lNJI4JSRVyR2FAxIlihg22x0FRbF9IsKs=">
+  // execute these lines to prevent flickering when page loads:
+
+  (function($) {
+    var wrapper = $('#wrapper');
+    var savedMainMenuWidth = window.OpenProject.guardedLocalStorage("openProject-mainMenuWidth");
+
+    if (window.innerWidth < 680) {
+      // force hide on load for mobile
+      $('.can-hide-navigation').addClass('hidden-navigation');
+    }
+
+    if (savedMainMenuWidth) {
+      document.documentElement.style.setProperty("--main-menu-width", savedMainMenuWidth + 'px');
+    }
+
+    wrapper.show();
+
+    // Wrapper for page-specific JS from deprecated inline functions
+    // no longer available with CSP.
+    
+  }(jQuery));
+</script>
+</body>
+</html>
+
