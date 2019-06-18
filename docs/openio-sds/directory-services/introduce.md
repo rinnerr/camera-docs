@@ -1,4 +1,4 @@
-Directory Services: gồm Meta0, Meta1 and Meta2 services, chịu trách nhiệm xử lý các directory requests và storing metadata  
+**Directory Services:** gồm Meta0, Meta1 and Meta2 services, chịu trách nhiệm xử lý các directory requests và storing metadata  
 
 ![](https://github.com/rinnerr/camera-docs/blob/master/docs/images/directory-services.png)  
 •	Containers và Objects được lưu trữ trong một thư mục phân tán ba cấp liên tục (Meta-0, Meta-1, Meta-2). OpenIO SDS có thể lưu trữ hàng trăm dịch vụ cho mỗi trăm triệu container. Thư mục có dạng hash table, ánh xạ containers’ UUIDs vào các services của họ. 
