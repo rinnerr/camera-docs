@@ -2,7 +2,7 @@
 •   Phải được triển khai trên 3 servers khác nhau  
 •	Nên triển khai trên high performance storage như SSD hay NVMe  
 
-Meta2-service:  
+Tạo Meta2-service trong /etc/systemd/system:  
 
     # OpenIO managed
     [Unit]
