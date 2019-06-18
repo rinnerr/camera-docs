@@ -1,0 +1,14 @@
+# OpenIO managed
+---
+host: 192.168.2.35
+port: 6110
+type: meta1
+location: node3.0
+checks:
+  - {type: tcp}
+stats:
+  - {type: volume, path: /var/lib/oio/sds/OPENIO/meta1-0}
+  - {type: meta}
+  - {type: system}
+...
+

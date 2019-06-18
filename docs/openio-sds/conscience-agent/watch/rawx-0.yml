@@ -1,0 +1,14 @@
+# OpenIO managed
+---
+host: 192.168.2.35
+port: 6200
+type: rawx
+location: node3.0
+checks:
+  - {type: http, uri: /info}
+stats:
+  - {type: volume, path: /var/lib/oio/sds/OPENIO/rawx-0}
+  - {type: rawx, path: /stat}
+  - {type: system}
+...
+
