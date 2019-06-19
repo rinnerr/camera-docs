@@ -17,9 +17,9 @@
     ns.chunk_size=104857600
     ns.service_update_policy=meta2=KEEP|3|1|;rdir=KEEP|1|1|;
 
-•	**proxy:** Thông báo cho client SDK trỏ về oio-proxy nào, là endpoint chính cho namespace.
-•	**conscience:** cho oio-proxy biết có những conscience nào đang được dùng.
-•	**zookeeper:** các zookeeper trong cluster, áp dụng cho các meta0, meta1, meta2 và sqlx services.
-•	**ecd:** cho client SDK service ecd đang chạy với ip và port nào.
-•	**event-agent:** event-agent connection dùng để tạo ra notifications. Bao gồm protocol và endpoint của notification backend (default beanstalk://)
-•	**ns.storage_policy:** phía storage có bao nhiêu replicate (SINGLE=1, TWOCOPIES=2, THREECOPIES=3)
+•	**proxy:** Thông báo cho client SDK trỏ về oio-proxy nào, là endpoint chính cho namespace.  
+•	**conscience:** cho oio-proxy biết có những conscience nào đang được dùng.  
+•	**zookeeper:** các zookeeper trong cluster, áp dụng cho các meta0, meta1, meta2 và sqlx services.  
+•	**ecd:** cho client SDK service ecd đang chạy với ip và port nào.  
+•	**event-agent:** event-agent connection dùng để tạo ra notifications. Bao gồm protocol và endpoint của notification backend (default beanstalk://)  
+•	**ns.storage_policy:** phía storage có bao nhiêu replicate (SINGLE=1, TWOCOPIES=2, THREECOPIES=3)  
