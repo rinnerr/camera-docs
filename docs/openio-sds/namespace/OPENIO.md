@@ -1,0 +1,20 @@
+•	Một tập hợp các network services kết hợp làm việc cùng nhau để chạy các giải pháp OpenIO.
+
+    # OpenIO managed
+    [OPENIO]
+    # endpoints
+    conscience=192.168.2.37:6000,192.168.2.36:6000,192.168.2.35:6000
+    zookeeper=192.168.2.37:6005,192.168.2.36:6005,192.168.2.35:6005
+    proxy=192.168.2.35:6006
+    event-agent=beanstalk://192.168.2.35:6014
+    ecd=192.168.2.35:6017
+
+    udp_allowed=yes
+
+    meta1_digits=2
+    ns.meta1_digits=2
+    #ns.storage_policy=TOWCOPIES
+    ns.storage_policy=SINGLE
+    ns.chunk_size=104857600
+    ns.service_update_policy=meta2=KEEP|3|1|;rdir=KEEP|1|1|;
+
