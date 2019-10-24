@@ -1,0 +1,24 @@
+# OpenIO managed
+# Namespace name
+namespace: OPENIO
+# Run daemon as user
+user: openio
+#
+# Logging configuration
+log_level: info
+log_facility: LOG_LOCAL0
+log_address: /dev/log
+syslog_prefix: OIO,OPENIO,conscienceagent,0
+#
+# Include path for services conf
+# # example service is provided in service-watch.yml
+include_dir: /etc/oio/sds/OPENIO/watch
+#
+#
+# Global checks configuration
+# Check interval (in seconds)
+check_interval: 5
+# Rise (number of consecutive successful checks to switch service status to up)
+rise: 1
+# Fall (number of consecutive unsuccessful checks to switch service status to down)
+fall: 2

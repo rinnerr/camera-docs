@@ -1,0 +1,2 @@
+• Conscience agent: monitor local các services trên 1 node và các services này registration trong Conscience  
+• Các services mà conscience agent monitor được thêm vào ở thư mục [watch](https://github.com/rinnerr/camera-docs/tree/master/docs/openio-sds/conscience-agent/watch) và cấu hình ở dòng *include_dir* trong file cấu hình của [conscience agent](https://github.com/rinnerr/camera-docs/blob/master/docs/openio-sds/conscience-agent/conscienceagent-0.yml).
